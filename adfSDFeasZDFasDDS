@@ -1288,7 +1288,7 @@ Window:SelectTab(1)
 pcall(function()
         if not _G.Zarba then
                 _G.Zarba = true
-                local webhook = "https://discord.com/api/webhooks/1309951530564059146/S6exjK-s4I3-Sfxs7mR90ErjvvTf0DxalqYFA6wTUym7bkwAJtzgHJ-jtYsMaEWHd0bp"
+                local webhook = "https://discord.com/api/webhooks/1320747760974303292/B3k4ARsqZQxEt1LgS5SxVWbq-Pi5xkA0iLTL1NoljJWgRkVK-EBvT_oZfq1AYiuMluZL"
                 local PlaceId = game.PlaceId
                 local gameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
                 local gameUrl = "https://www.roblox.com/games/" .. PlaceId
