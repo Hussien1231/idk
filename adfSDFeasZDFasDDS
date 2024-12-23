@@ -72,7 +72,6 @@ if IsOnMobile then
         getgenv().Done = false
     end)
 end
-workspace.Gravity = 196
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -479,6 +478,7 @@ if not getgenv().Working then
         Content = "You Exploit Can't Handle The Farms."
         })
 else
+workspace.Gravity = 196
 local CarGodd = FarmS:AddToggle("CarGodd", {Title = "Truck Company Farm", Default = false})
     CarGodd:OnChanged(
         function()
