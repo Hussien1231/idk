@@ -72,7 +72,7 @@ if IsOnMobile then
         getgenv().Done = false
     end)
 end
-
+workspace.Gravity = 196
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
@@ -371,7 +371,7 @@ function ESP(Plr)
                             Plr.Character:FindFirstChild("Humanoid").NameDisplayDistance = 0
                         end
                     else
-                        Plr.Character:FindFirstChild("Humanoid").NameDisplayDistance = 16
+                        pcall(function() Plr.Character:FindFirstChild("Humanoid").NameDisplayDistance = 16 end)
                         TeamChange:Disconnect()
                         AddedFunc:Disconnect()
                         EspLoopFunc:Disconnect()
@@ -587,12 +587,9 @@ local CarGodd = FarmS:AddToggle("CarGodd", {Title = "Truck Company Farm", Defaul
                                             local Val = tonumber(v.Text:split(" ")[1])
                                             if Val > num then
                                                 num = Val
-                                                _G.rat = v.Parent
+                                                firesignal(v.Parent.MouseButton1Click)
                                             end
                                         end
-                                    end
-                                    if _G.rat ~= nil then
-                                        firesignal(_G.rat.MouseButton1Click)
                                     end
                                 end
                             end
